@@ -1,7 +1,7 @@
 const recipes = [
     { 
     name: "Tortellini in Sahnesoße", 
-    image: "images/tortellini.jpg", 
+    image: "images/Tortellini.jpg", 
     link: "https://www.chefkoch.de/rezepte/1342861239100533/Tortellini-alla-panna.html",
     tags: ["Abendessen"],
     ingredients: [
@@ -60,7 +60,7 @@ const recipes = [
 },
 { 
     name: "Mozzarella Hühnchen", 
-    image: "images/mozzarella_huehnchen.jpg", 
+    image: "images/Mozzarella_Huehnchen.jpg", 
     link: "https://littlespicejar.com/30-minute-mozzarella-chicken/?utm_content=bufferfeeae&utm_medium=social&utm_source=pinterest.com&utm_campaign=buffer",
     tags: ["Abendessen", "High-protein"],
     ingredients: [
@@ -92,7 +92,7 @@ const recipes = [
 },
 { 
     name: "Pizzasuppe", 
-    image: "images/pizzasuppe.jpg", 
+    image: "images/Pizzasuppe.jpg", 
     link: "https://www.essen-ohne-kohlenhydrate.info/rezepte/pizzasuppe/",
     tags: ["Abendessen", "Low-carb"],
     ingredients: [
