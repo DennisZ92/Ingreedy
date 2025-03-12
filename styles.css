@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(to bottom, rgb(254, 250, 224), #e0e0e0);
+}
+    .container {
+        max-width: 400px;
+        margin: auto;
+        background: linear-gradient(to bottom, rgb(254, 250, 224), #e0e0e0);
+        padding: 20px;
+        border-radius: 10px;
+        /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    }
+    h1, h2 {
+        text-align: center;
+        color: rgb(98, 111, 71);
+    }
+    .tag-selection {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    .tag-selection button, .clear-list {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background: rgb(164, 180, 101);
+        color:white;
+        cursor: pointer;
+    }
+    .tag-selection button.selected {
+        background: rgb(98, 111, 71);
+        color: white;
+    }
+    .recipe-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .recipe-item {
+        display: flex;
+        align-items: center;
+        background: #fff;
+        padding: 0;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
+        position: relative;
+        cursor: pointer;
+    }
+    .recipe-item img {
+        width: 100%;
+        height: 100px;
+        border-radius: 10px;
+        object-fit: cover;
+        filter: brightness(80%);
+    }
+    .recipe-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        color: white;
+        padding: 10px;
+        border-radius: 0 0 10px 10px;
+    }
+    .recipe-info h3 {
+        margin: 0;
+        font-size: 16px;
+    }
+    .recipe-info h3 a {
+        color: white;
+        text-decoration: none;
+    }
+    .recipe-info h3 a:hover {
+        text-decoration: none;
+        color: rgb(164, 180, 101);
+    }
+    .checkmark {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 24px;
+        height: 24px;
+        font-size: 24px;
+        color: rgb(255, 207, 80);;
+        background-color: rgb(164, 180, 101);
+        border-radius: 5px;
+        display: none;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);;
+        align-items: center;
+        justify-content: center;
+    }
+    .recipe-item.selected .checkmark {
+        display: flex;
+    }
+    #shopping-list {
+        list-style-type: none;
+        padding: 0;
+        color: rgb(98, 111, 71);
+    }
+    .remove-item {
+        cursor: pointer;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+        margin-right: 8px;
+    }
+    .clear-list {
+        display: block;
+        margin: 20px auto;
+    }
+    .add-item {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .add-item input {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        flex: 1;
+    }
+    .add-item button {
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        background: rgb(164, 180, 101);
+        color: white;
+        cursor: pointer;
+    }
