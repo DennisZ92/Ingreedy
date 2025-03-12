@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookbook</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ingreedy</h1>
+        <!-- <input type="text" id="search" placeholder="Search Your Recipes, Cuisines, more..."> -->
+        <div id="recipe-list" class="recipe-list"></div>
+        <h2>Einkaufsliste</h2>
+        <ul id="shopping-list"></ul>
+    </div>
+    <script>
+        const recipes = [
+        { 
+        name: "Tortellini in Sahnesoße", 
+        image: "images/tortellini.jpg", 
+        link: "https://www.chefkoch.de/rezepte/1342861239100533/Tortellini-alla-panna.html",
+        ingredients: [
+            { name: "Tortellini", amount: 500, unit: "g" }, 
+            { name: "Kochschinken", amount: 200, unit: "g" }, 
+            { name: "Butter", amount: 1, unit: "EL" }, 
+            { name: "Sahne", amount: 600, unit: "ml" }, 
+            { name: "Eigelb", amount: 2, unit: "Stk" }, 
+            { name: "Parmesan", amount: 4, unit: "EL" }, 
+            { name: "Muskat", amount: 1, unit: "TL" }, 
+            { name: "Salz", amount: 1, unit: "TL" }
+        ]
+    },
+    { 
+        name: "Shakshuka", 
+        image: "images/shakshuka.jpg", 
+        link: "https://feinschmeckerle.de/2017/03/19/shakshuka-kitchen-impossible/",
+        ingredients: [
+            { name: "Olivenöl", amount: 3, unit: "EL" },
+            { name: "Zwiebel", amount: 1, unit: "groß" },
+            { name: "Knoblauch", amount: 1, unit: "Zehe" },
+            { name: "Paprika", amount: 1, unit: "Schote" },
+            { name: "Tomaten", amount: 1, unit: "Dose" },
+            { name: "Tomatenmark", amount: 2, unit: "EL" },
+            { name: "Kreuzkümmel", amount: 1, unit: "TL" },
+            { name: "Paprika edelsüß", amount: 1, unit: "TL" },
+            { name: "Meersalz", amount: 1, unit: "TL" },
+            { name: "Zucker", amount: 1, unit: "Prise" },
+            { name: "Chilipulver", amount: 1, unit: "Prise" },
+            { name: "Pfeffer", amount: 1, unit: "Prise" },
+            { name: "Eier", amount: 4, unit: "Stk" },
+            { name: "Petersilie", amount: 0.5, unit: "Bund" }
+        ]
+    },
+    { 
+        name: "Wraps", 
+        image: "images/wraps.jpg", 
+        link: "https://amerikanisch-kochen.de/wraps-mit-hahnchenbrust-wraps-with-chickenbreast/1886",
+        ingredients: [
+            { name: "Hähnchenbrust", amount: 1, unit: "Stk" },
+            { name: "Olivenöl", amount: 3, unit: "EL" },
+            { name: "Tomate", amount: 1, unit: "groß" },
+            { name: "Salat", amount: 1, unit: "Kopf" },
+            { name: "Paprika", amount: 1, unit: "Stk" },
+            { name: "Majonäse", amount: 100, unit: "g" },
+            { name: "Zitronensaft", amount: 1, unit: "EL" },
+            { name: "Zwiebel", amount: 1, unit: "Stk" },
+            { name: "Knoblauchzehe", amount: 1, unit: "Stk" },
+            { name: "Paprika edelsüß", amount: 0.5, unit: "TL" },
+            { name: "Cayenne-Pfeffer", amount: 0.25, unit: "TL" },
+            { name: "Salz", amount: 1, unit: "Prise" },
+            { name: "Pfeffer", amount: 1, unit: "Prise" },
+            { name: "Tortillas", amount: 2, unit: "Stk" }
+        ]
+    },
+    { 
+        name: "Mozzarella Hühnchen", 
+        image: "images/mozzarella_huehnchen.jpg", 
+        link: "https://littlespicejar.com/30-minute-mozzarella-chicken/?utm_content=bufferfeeae&utm_medium=social&utm_source=pinterest.com&utm_campaign=buffer",
+        ingredients: [
+            { name: "Hähnchenbrust", amount: 4, unit: "Stk" },
+            { name: "Olivenöl", amount: 1, unit: "EL" },
+            { name: "Knoblauch", amount: 1, unit: "EL" },
+            { name: "Zwiebeln", amount: 0.5, unit: "cup" },
+            { name: "Tomaten", amount: 14, unit: "oz" },
+            { name: "Italienische Kräuter", amount: 0.5, unit: "TL" },
+            { name: "Mozzarella", amount: 4, unit: "Scheiben" }
+        ]
+    }
+];
+
+        const selectedRecipes = new Set();
+
+        function renderRecipes() {
+            const recipeList = document.getElementById("recipe-list");
+            recipeList.innerHTML = "";
+            recipes.forEach((recipe, index) => {
+                const recipeItem = document.createElement("div");
+                recipeItem.classList.add("recipe-item");
+                recipeItem.innerHTML = `
+                    <input type="checkbox" data-index="${index}">
+                    <img src="${recipe.image}" alt="${recipe.name}">
+                    <div class="recipe-info">
+                        <h3>${recipe.name}</h3>
+                    </div>
+                `;
+                recipeItem.querySelector("input").addEventListener("change", toggleRecipeSelection);
+                recipeList.appendChild(recipeItem);
+            });
+        }
+
+        function toggleRecipeSelection(event) {
+            const index = event.target.dataset.index;
+            if (event.target.checked) {
+                selectedRecipes.add(index);
+            } else {
+                selectedRecipes.delete(index);
+            }
+            updateShoppingList();
+        }
+
+        function updateShoppingList() {
+            const shoppingList = {};
+            selectedRecipes.forEach(index => {
+                recipes[index].ingredients.forEach(ingredient => {
+                    if (shoppingList[ingredient.name]) {
+                        shoppingList[ingredient.name].amount += ingredient.amount;
+                    } else {
+                        shoppingList[ingredient.name] = { amount: ingredient.amount, unit: ingredient.unit };
+                    }
+                });
+            });
+            renderShoppingList(shoppingList);
+        }
+
+        function renderShoppingList(shoppingList) {
+            const shoppingListEl = document.getElementById("shopping-list");
+            shoppingListEl.innerHTML = "";
+            Object.entries(shoppingList).forEach(([name, details]) => {
+                const li = document.createElement("li");
+                li.textContent = `${details.amount} ${details.unit} ${name}`;
+                shoppingListEl.appendChild(li);
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", renderRecipes);
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        #search {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .recipe-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .recipe-item {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .recipe-item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+        .recipe-info h3 {
+            margin: 0;
+            font-size: 16px;
+        }
+        .recipe-info p {
+            margin: 5px 0 0;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</body>
+</html>
