@@ -10,7 +10,7 @@ const recipes = [
             { name: "Butter", amount: 1, unit: "EL" }, 
             { name: "Sahne", amount: 600, unit: "ml" }, 
             { name: "Eigelb", amount: 2, unit: "Stk" }, 
-            { name: "Parmesan", amount: 4, unit: "EL" }, 
+            { name: "Käse", amount: 120, unit: "g" }, 
             { name: "Muskat", amount: 1, unit: "TL" }, 
             { name: "Salz", amount: 1, unit: "TL" }
         ]
@@ -19,13 +19,13 @@ const recipes = [
         name: "Shakshuka", 
         image: "images/shakshuka.jpg", 
         link: "https://feinschmeckerle.de/2017/03/19/shakshuka-kitchen-impossible/",
-        tags: ["Hauptgericht", "Low-carb"],
+        tags: ["Hauptgericht", "Low-Carb"],
         ingredients: [
             { name: "Olivenöl", amount: 3, unit: "EL" },
             { name: "Zwiebel", amount: 1, unit: "Stk" },
             { name: "Knoblauch", amount: 1, unit: "Zehe" },
             { name: "Paprika", amount: 1, unit: "Stk" },
-            { name: "Tomate", amount: 1, unit: "Dose" },
+            { name: "gehackte Tomate", amount: 1, unit: "Dose" },
             { name: "Tomatenmark", amount: 2, unit: "EL" },
             { name: "Kreuzkümmel", amount: 1, unit: "TL" },
             { name: "Paprikapulver", amount: 1, unit: "TL" },
@@ -42,7 +42,7 @@ const recipes = [
         link: "https://amerikanisch-kochen.de/wraps-mit-hahnchenbrust-wraps-with-chickenbreast/1886",
         tags: ["Hauptgericht", "High-protein", "Snack"],
         ingredients: [
-            { name: "Hähnchenbrust", amount: 1, unit: "Stk" },
+            { name: "Hähnchenbrust", amount: 400, unit: "g" },
             { name: "Olivenöl", amount: 3, unit: "EL" },
             { name: "Tomate", amount: 1, unit: "Stk" },
             { name: "Salat", amount: 1, unit: "Kopf" },
@@ -64,23 +64,23 @@ const recipes = [
         link: "https://littlespicejar.com/30-minute-mozzarella-chicken/?utm_content=bufferfeeae&utm_medium=social&utm_source=pinterest.com&utm_campaign=buffer",
         tags: ["Hauptgericht", "High-protein","Low-Carb"],
         ingredients: [
-            { name: "Hähnchenbrust", amount: 4, unit: "Stk" },
+            { name: "Hähnchenbrust", amount: 600, unit: "g" },
             { name: "Olivenöl", amount: 1, unit: "EL" },
             { name: "Knoblauch", amount: 1, unit: "Zehe" },
             { name: "Zwiebel", amount: 2, unit: "Stk" },
             { name: "Tomate", amount: 4, unit: "Stk" },
             { name: "Italienische Kräuter", amount: 0.5, unit: "TL" },
-            { name: "Mozzarella", amount: 4, unit: "Scheibe" }
+            { name: "Mozzarella", amount: 200, unit: "g" }
         ]
     },
     { 
         name: "Zwiebelhühnchen", 
         image: "images/zwiebelhuehnchen.jpg", 
         link: "https://www.crunchycreamysweet.com/french-onion-roasted-chicken-recipe/",
-        tags: ["Hauptgericht", "High-protein", "Low-carb"],
+        tags: ["Hauptgericht", "High-protein", "Low-Carb"],
         ingredients: [
             { name: "Hähnchenbrust", amount: 400, unit: "g" }, 
-            { name: "Butter", amount: 2, unit: "TL" }, 
+            { name: "Butter", amount: 1, unit: "EL" }, 
             { name: "Olivenöl", amount: 2, unit: "EL" }, 
             { name: "Zwiebel", amount: 3, unit: "Stk" }, 
             { name: "Hühnerbrühe", amount: 1, unit: "L" }, 
@@ -94,9 +94,9 @@ const recipes = [
         name: "Pizzasuppe", 
         image: "images/Pizzasuppe.jpg", 
         link: "https://www.essen-ohne-kohlenhydrate.info/rezepte/pizzasuppe/",
-        tags: ["Hauptgericht", "Low-carb"],
+        tags: ["Hauptgericht", "Low-Carb"],
         ingredients: [
-            { name: "Zwiebel", amount: 120, unit: "g" }, 
+            { name: "Zwiebel", amount: 2, unit: "Stk" }, 
             { name: "Olivenöl", amount: 4, unit: "EL" }, 
             { name: "Hackfleisch", amount: 500, unit: "g" }, 
             { name: "Paprika", amount: 2, unit: "Stk" }, 
@@ -118,7 +118,7 @@ const recipes = [
         name: "Zitronenhähnchen", 
         image: "images/Zitronenhaehnchen.png", 
         link: "https://www.youtube.com/watch?v=a_B_vL3iHQM&ab_channel=JamieOliver",
-        tags: ["Hauptgericht", "Low-carb","High-Protein"],
+        tags: ["Hauptgericht", "Low-Carb","High-Protein"],
         ingredients: [
             { name: "Olivenöl", amount: 3, unit: "EL" }, 
             { name: "Hähnchenbrust", amount: 400, unit: "g" }, 
@@ -144,14 +144,12 @@ const recipes = [
             { name: "Tortilla", amount: 8, unit: "Stk" }, 
             { name: "Paprika", amount: 3, unit: "Stk" }, 
             { name: "Zwiebel", amount: 1, unit: "Stk" }, 
-            { name: "Pizzakäse", amount: 200, unit: "g" }, 
+            { name: "geriebener Käse", amount: 200, unit: "g" }, 
             { name: "BBQ-Rub", amount: 1, unit: "EL" }, 
             { name: "Limette", amount: 1, unit: "Stk" }, 
             { name: "Petersilie", amount: 1, unit: "Bund" }
         ]
     },
-
-    // Neue Rezepte
 
     {
         name: "Garlic Chilli Noodles",
@@ -230,7 +228,7 @@ const recipes = [
         name: "Gefüllte Zwiebeln",
         image: "images/Gefuellte_Zwiebeln.png",
         link: "https://www.facebook.com/watch/?ref=saved&v=1430710058837180",
-        tags: ["Hauptgericht", "Low-Carb"],
+        tags: ["Hauptgericht"],
         ingredients: [
             { name: "Zwiebel", amount: 6, unit: "Stk" },
             { name: "Hackfleisch", amount: 400, unit: "g" },
@@ -257,13 +255,13 @@ const recipes = [
             { name: "Staudensellerie", amount: 3, unit: "Stange" },
             { name: "Pfeffer", amount: 0.5, unit: "TL" },
             { name: "Italienische Kräuter", amount: 2, unit: "TL" },
-            { name: "Tomatenmark", amount: 170, unit: "g" },
+            { name: "Tomatenmark", amount: 3, unit: "EL" },
             { name: "Mehl", amount: 60, unit: "g" },
             { name: "Rinderbrühe", amount: 1700, unit: "ml" },
             { name: "Tortellini", amount: 570, unit: "g" },
             { name: "Sahne", amount: 480, unit: "ml" },
-            { name: "Spinat", amount: 120, unit: "g" },
-            { name: "Parmesan", amount: 50, unit: "g" }
+            { name: "Parmesan", amount: 50, unit: "g" },
+            { name: "Spinat", amount: 120, unit: "g" }
         ]
     },
     {
@@ -347,7 +345,7 @@ const recipes = [
         link: "https://www.facebook.com/watch/?ref=saved&v=737544619315115",
         tags: ["Hauptgericht","High-Protein"],
         ingredients: [
-            { name: "Tomatenmark", amount: 30, unit: "g" },
+            { name: "Tomatenmark", amount: 1, unit: "EL" },
             { name: "Taco-Gewürz", amount: 30, unit: "g" },
             { name: "Hackfleisch", amount: 500, unit: "g" },
             { name: "Rinderbrühe", amount: 750, unit: "ml" },
@@ -382,13 +380,13 @@ const recipes = [
         link: "",
         tags: ["Hauptgericht"],
         ingredients: [
-            { name: "Sahne", amount: 200, unit: "g" },
+            { name: "Sahne", amount: 200, unit: "ml" },
             { name: "Hühnerbrühe", amount: 200, unit: "ml" },
             { name: "Brokkoli", amount: 300, unit: "g" },
             { name: "Kirschtomate", amount: 250, unit: "g" },
             { name: "Bacon", amount: 125, unit: "g" },
             { name: "Nudeln", amount: 300, unit: "g" },
-            { name: "Hartkäse", amount: 60, unit: "g" }
+            { name: "Parmesan", amount: 60, unit: "g" }
         ]
     },
     {
@@ -397,7 +395,7 @@ const recipes = [
         link: "",
         tags: ["Hauptgericht"],
         ingredients: [
-            { name: "Hackfleisch gemischt", amount: 450, unit: "g" },
+            { name: "Hackfleisch", amount: 450, unit: "g" },
             { name: "Zwiebel", amount: 1, unit: "Stk" },
             { name: "Senf", amount: 1, unit: "EL" },
             { name: "Semmelbrösel", amount: 40, unit: "g" },
@@ -409,174 +407,388 @@ const recipes = [
     }
 ];
 
-    const selectedRecipes = new Set();
-    const selectedTags = new Set();
+const ingredientCategories = {
+    "Zwiebel": "Gemüse",
+    "Frühlingszwiebel": "Gemüse",
+    "Knoblauch": "Gemüse",
+    "Knoblauchknolle": "Gemüse",
+    "Paprika": "Gemüse",
+    "Tomate": "Gemüse",
+    "Kirschtomate": "Gemüse",
+    "Zucchini": "Gemüse",
+    "Champignon": "Gemüse",
+    "Karotte": "Gemüse",
+    "Staudensellerie": "Gemüse",
+    "Spinat": "Gemüse",
+    "Rosenkohl": "Gemüse",
+    "Kartoffel": "Gemüse",
+    "Salat": "Gemüse",
+    "Gurke": "Gemüse",
+    "Brokkoli": "Gemüse",
+    "Chili": "Gemüse",
+    "Ingwer": "Gemüse",
+    "Petersilie": "Gemüse",
+    "Basilikum": "Gemüse",
+    "Dill": "Gemüse",
+    "Thymian": "Gemüse",
+    "Zitrone": "Gemüse",
+    "Limette": "Gemüse",
+    "Mais": "Gemüse",
 
-    const recipeShoppingList = {};
-    const manualShoppingList = {};
+    "Hähnchenbrust": "Fleisch",
+    "Hähnchenschenkel": "Fleisch",
+    "Hackfleisch": "Fleisch",
+    "Kochschinken": "Fleisch",
+    "Bacon": "Fleisch",
+    "Tofu": "Fleisch",
 
-    function renderRecipes() {
-        const recipeList = document.getElementById("recipe-list");
-        recipeList.innerHTML = "";
+    "Sahne": "Milchprodukte",
+    "Käse": "Milchprodukte",
+    "Mozzarella": "Milchprodukte",
+    "Frischkäse": "Milchprodukte",
+    "Cheddar": "Milchprodukte",
+    "Sour Cream": "Milchprodukte",
+    "Griechischer Joghurt": "Milchprodukte",
+    "Naturjoghurt": "Milchprodukte",
+    "Hirtenkäse": "Milchprodukte",
+    "Parmesan": "Milchprodukte",
+    "geriebener Käse": "Milchprodukte",
+    "Butter": "Milchprodukte",
+    "Ei": "Milchprodukte",
+    "Eigelb": "Milchprodukte",
+    "Mayonnaise": "Milchprodukte",
 
-        recipes.forEach((recipe, index) => {
-            if (selectedTags.size === 0 || recipe.tags.some(tag => selectedTags.has(tag))) {
-                const recipeItem = document.createElement("div");
-                recipeItem.classList.add("recipe-item");
+    "Tortellini": "Trockenwaren",
+    "Tortilla": "Trockenwaren",
+    "Nudeln": "Trockenwaren",
+    "Farfalle": "Trockenwaren",
+    "Reis": "Trockenwaren",
+    "Reis gekocht": "Trockenwaren",
+    "Linsen": "Trockenwaren",
+    "Mehl": "Trockenwaren",
+    "Semmelbrösel": "Trockenwaren",
+    "Fladenbrot": "Trockenwaren",
+    "Stärke": "Trockenwaren",
 
-                if (selectedRecipes.has(String(index))) {
-                    recipeItem.classList.add("selected");
-                }
+    "Salz": "Gewürze",
+    "Pfeffer": "Gewürze",
+    "Muskat": "Gewürze",
+    "Kreuzkümmel": "Gewürze",
+    "Paprikapulver": "Gewürze",
+    "Chilipulver": "Gewürze",
+    "Cayenne-Pfeffer": "Gewürze",
+    "Kurkuma": "Gewürze",
+    "Oregano": "Gewürze",
+    "Italienische Kräuter": "Gewürze",
+    "BBQ-Rub": "Gewürze",
+    "Gochugaru": "Gewürze",
+    "Knoblauchpulver": "Gewürze",
+    "Zwiebelpulver": "Gewürze",
+    "Chiliflocken": "Gewürze",
+    "Taco-Gewürz": "Gewürze",
 
-                recipeItem.innerHTML = `
-                    <img src="${recipe.image}" alt="${recipe.name}" data-index="${index}">
-                    <div class="recipe-info">
-                        <h3><a href="${recipe.link}" target="_blank">${recipe.name}</a></h3>
-                    </div>
-                    <div class="checkmark">&#10003;</div>
-                `;
+    "Tomatenmark": "Konserven",
+    "Paprikamark": "Konserven",
+    "Passierte Tomaten": "Konserven",
+    "Gehackte Tomaten": "Konserven",
+    "gehackte Tomate": "Konserven",
+    "Getrocknete Tomaten": "Konserven",
+    "Schwarze Bohnen": "Konserven",
+    "Kapern": "Konserven",
+    "Gemüsebrühe": "Konserven",
+    "Hühnerbrühe": "Konserven",
+    "Rinderbrühe": "Konserven",
+    "Sojasoße dunkel": "Konserven",
+    "Sojasoße": "Konserven",
+    "Vegane Austernsauce": "Konserven",
 
-                recipeItem.querySelector("img").addEventListener("click", toggleRecipeSelection);
-                recipeList.appendChild(recipeItem);
+    "Olivenöl": "Sonstiges",
+    "Avocadoöl": "Sonstiges",
+    "Zitronensaft": "Sonstiges",
+    "Wasser": "Sonstiges",
+    "Granatapfelsirup": "Sonstiges",
+    "Senf": "Sonstiges"
+};
+
+const ingredientAliases = {
+    "zwiebeln": "Zwiebel",
+    "zwiebel": "Zwiebel",
+    "frühlingszwiebeln": "Frühlingszwiebel",
+    "frühlingszwiebel": "Frühlingszwiebel",
+    "knoblauchzehe": "Knoblauch",
+    "knoblauchzehen": "Knoblauch",
+    "knoblauch": "Knoblauch",
+    "paprikas": "Paprika",
+    "paprika": "Paprika",
+    "tomaten": "Tomate",
+    "tomate": "Tomate",
+    "kirschtomaten": "Kirschtomate",
+    "kirschtomate": "Kirschtomate",
+    "eier": "Ei",
+    "ei": "Ei",
+    "kartoffeln": "Kartoffel",
+    "kartoffel": "Kartoffel",
+    "zitronen": "Zitrone",
+    "zitrone": "Zitrone",
+    "limetten": "Limette",
+    "limette": "Limette",
+    "champignons": "Champignon",
+    "champignon": "Champignon",
+    "möhren": "Karotte",
+    "möhre": "Karotte",
+    "karotten": "Karotte",
+    "karotte": "Karotte",
+    "gurken": "Gurke",
+    "gurke": "Gurke",
+    "paprikamark": "Paprikamark",
+    "tomatenmark": "Tomatenmark",
+    "passierte tomaten": "Passierte Tomaten",
+    "gehackte tomaten": "Gehackte Tomaten",
+    "gehackte tomate": "gehackte Tomate",
+    "getrocknete tomaten": "Getrocknete Tomaten",
+    "hähnchenbrust": "Hähnchenbrust",
+    "hühnerbrust": "Hähnchenbrust",
+    "hackfleisch": "Hackfleisch",
+    "tortillas": "Tortilla",
+    "tortilla": "Tortilla",
+    "nudel": "Nudeln",
+    "nudeln": "Nudeln",
+    "linsen": "Linsen",
+    "reis": "Reis",
+    "reis gekocht": "Reis gekocht",
+    "sahne": "Sahne",
+    "butter": "Butter",
+    "käse": "Käse",
+    "geriebener käse": "geriebener Käse",
+    "mozzarella": "Mozzarella",
+    "parmesan": "Parmesan",
+    "frischkäse": "Frischkäse",
+    "cheddar": "Cheddar",
+    "sour cream": "Sour Cream",
+    "naturjoghurt": "Naturjoghurt",
+    "griechischer joghurt": "Griechischer Joghurt",
+    "salz": "Salz",
+    "pfeffer": "Pfeffer",
+    "oregano": "Oregano",
+    "basilikum": "Basilikum",
+    "petersilie": "Petersilie",
+    "dill": "Dill",
+    "thymian": "Thymian",
+    "olivenöl": "Olivenöl",
+    "avocadoöl": "Avocadoöl",
+    "zitronensaft": "Zitronensaft",
+    "wasser": "Wasser",
+    "senf": "Senf"
+};
+
+const categoryOrder = [
+    "Gemüse",
+    "Fleisch",
+    "Milchprodukte",
+    "Trockenwaren",
+    "Gewürze",
+    "Konserven",
+    "Sonstiges"
+];
+
+const selectedRecipes = new Set();
+const selectedTags = new Set();
+
+const recipeShoppingList = {};
+const manualShoppingList = {};
+
+function normalizeIngredientName(name) {
+    if (!name) return "";
+    const cleaned = name.trim().toLowerCase();
+    return ingredientAliases[cleaned] || name.trim();
+}
+
+function getCategoryForIngredient(name) {
+    const normalizedName = normalizeIngredientName(name);
+    return ingredientCategories[normalizedName] || "Sonstiges";
+}
+
+function renderRecipes() {
+    const recipeList = document.getElementById("recipe-list");
+    recipeList.innerHTML = "";
+
+    recipes.forEach((recipe, index) => {
+        if (selectedTags.size === 0 || recipe.tags.some(tag => selectedTags.has(tag))) {
+            const recipeItem = document.createElement("div");
+            recipeItem.classList.add("recipe-item");
+
+            if (selectedRecipes.has(String(index))) {
+                recipeItem.classList.add("selected");
             }
-        });
-    }
 
-    function toggleRecipeSelection(event) {
-        const index = event.target.dataset.index;
-        const recipeItem = event.target.closest(".recipe-item");
+            recipeItem.innerHTML = `
+                <img src="${recipe.image}" alt="${recipe.name}" data-index="${index}">
+                <div class="recipe-info">
+                    <h3><a href="${recipe.link}" target="_blank">${recipe.name}</a></h3>
+                </div>
+                <div class="checkmark">&#10003;</div>
+            `;
 
-        if (selectedRecipes.has(index)) {
-            selectedRecipes.delete(index);
-            recipeItem.classList.remove("selected");
-        } else {
-            selectedRecipes.add(index);
-            recipeItem.classList.add("selected");
+            recipeItem.querySelector("img").addEventListener("click", toggleRecipeSelection);
+            recipeList.appendChild(recipeItem);
         }
+    });
+}
 
-        updateShoppingList();
+function toggleRecipeSelection(event) {
+    const index = event.target.dataset.index;
+    const recipeItem = event.target.closest(".recipe-item");
+
+    if (selectedRecipes.has(index)) {
+        selectedRecipes.delete(index);
+        recipeItem.classList.remove("selected");
+    } else {
+        selectedRecipes.add(index);
+        recipeItem.classList.add("selected");
     }
 
-    function updateShoppingList() {
-        Object.keys(recipeShoppingList).forEach(key => delete recipeShoppingList[key]);
+    updateShoppingList();
+}
 
-        selectedRecipes.forEach(index => {
-            recipes[index].ingredients.forEach(ingredient => {
-                const key = `${ingredient.name}-${ingredient.unit}`;
+function updateShoppingList() {
+    Object.keys(recipeShoppingList).forEach(key => delete recipeShoppingList[key]);
 
-                if (recipeShoppingList[key]) {
-                    recipeShoppingList[key].amount += ingredient.amount;
-                } else {
-                    recipeShoppingList[key] = {
-                        amount: ingredient.amount,
-                        unit: ingredient.unit
-                    };
-                }
-            });
-        });
+    selectedRecipes.forEach(index => {
+        recipes[index].ingredients.forEach(ingredient => {
+            const normalizedName = normalizeIngredientName(ingredient.name);
+            const key = `${normalizedName}-${ingredient.unit}`;
 
-        renderShoppingList();
-    }
-
-    function renderShoppingList() {
-        const shoppingListEl = document.getElementById("shopping-list");
-        shoppingListEl.innerHTML = "";
-
-        const combinedShoppingList = {};
-
-        function addToCombinedList(sourceList) {
-            Object.entries(sourceList).forEach(([key, details]) => {
-                if (!combinedShoppingList[key]) {
-                    combinedShoppingList[key] = {
-                        amount: details.amount,
-                        unit: details.unit
-                    };
-                } else {
-                    const currentAmount = parseFloat(combinedShoppingList[key].amount);
-                    const newAmount = parseFloat(details.amount);
-
-                    if (!isNaN(currentAmount) && !isNaN(newAmount)) {
-                        combinedShoppingList[key].amount = currentAmount + newAmount;
-                    }
-                }
-            });
-        }
-
-        addToCombinedList(recipeShoppingList);
-        addToCombinedList(manualShoppingList);
-
-        Object.entries(combinedShoppingList).forEach(([key, details]) => {
-            const li = document.createElement("li");
-            const name = key.split("-")[0];
-            const amountText = details.amount !== "" && details.amount !== undefined ? details.amount : "";
-            const unitText = details.unit || "";
-
-            li.innerHTML = `<img src="icons/dash-circle.svg" class="remove-item" alt="Remove"> ${amountText} ${unitText} ${name}`;
-
-            li.querySelector(".remove-item").addEventListener("click", () => {
-                delete recipeShoppingList[key];
-                delete manualShoppingList[key];
-                renderShoppingList();
-            });
-
-            shoppingListEl.appendChild(li);
-        });
-    }
-
-    function toggleTagSelection(event) {
-        const tag = event.target.value;
-
-        if (selectedTags.has(tag)) {
-            selectedTags.delete(tag);
-            event.target.classList.remove("selected");
-        } else {
-            selectedTags.add(tag);
-            event.target.classList.add("selected");
-        }
-
-        renderRecipes();
-    }
-
-    function clearShoppingList() {
-        selectedRecipes.clear();
-
-        Object.keys(recipeShoppingList).forEach(key => delete recipeShoppingList[key]);
-        Object.keys(manualShoppingList).forEach(key => delete manualShoppingList[key]);
-
-        renderShoppingList();
-        renderRecipes();
-    }
-
-    function addItemToList() {
-        const input = document.getElementById("item-input").value;
-        const [name, amount, unit] = input.split(",").map(item => item.trim());
-
-        if (name) {
-            const key = `${name}-${unit || ""}`;
-            const parsedAmount = parseFloat(amount);
-
-            if (manualShoppingList[key]) {
-                if (!isNaN(parsedAmount)) {
-                    const currentAmount = parseFloat(manualShoppingList[key].amount) || 0;
-                    manualShoppingList[key].amount = currentAmount + parsedAmount;
-                }
+            if (recipeShoppingList[key]) {
+                recipeShoppingList[key].amount += ingredient.amount;
             } else {
-                manualShoppingList[key] = {
-                    amount: !isNaN(parsedAmount) ? parsedAmount : "",
-                    unit: unit || ""
+                recipeShoppingList[key] = {
+                    amount: ingredient.amount,
+                    unit: ingredient.unit
                 };
             }
-
-            renderShoppingList();
-            document.getElementById("item-input").value = "";
-        }
-    }
-
-    document.querySelectorAll('#tag-selection button').forEach(button => {
-        button.addEventListener('click', toggleTagSelection);
+        });
     });
 
-    document.getElementById('clear-list').addEventListener('click', clearShoppingList);
-    document.getElementById('add-item').addEventListener('click', addItemToList);
+    renderShoppingList();
+}
 
-    document.addEventListener("DOMContentLoaded", renderRecipes);
+function renderShoppingList() {
+    const shoppingListEl = document.getElementById("shopping-list");
+    shoppingListEl.innerHTML = "";
+
+    const combinedShoppingList = {};
+
+    function addToCombinedList(sourceList) {
+        Object.entries(sourceList).forEach(([key, details]) => {
+            if (!combinedShoppingList[key]) {
+                combinedShoppingList[key] = {
+                    amount: details.amount,
+                    unit: details.unit
+                };
+            } else {
+                const currentAmount = parseFloat(combinedShoppingList[key].amount);
+                const newAmount = parseFloat(details.amount);
+
+                if (!isNaN(currentAmount) && !isNaN(newAmount)) {
+                    combinedShoppingList[key].amount = currentAmount + newAmount;
+                }
+            }
+        });
+    }
+
+    addToCombinedList(recipeShoppingList);
+    addToCombinedList(manualShoppingList);
+
+    const sortedEntries = Object.entries(combinedShoppingList).sort(([keyA], [keyB]) => {
+        const nameA = keyA.split("-")[0];
+        const nameB = keyB.split("-")[0];
+
+        const categoryA = getCategoryForIngredient(nameA);
+        const categoryB = getCategoryForIngredient(nameB);
+
+        const categoryIndexA = categoryOrder.indexOf(categoryA);
+        const categoryIndexB = categoryOrder.indexOf(categoryB);
+
+        if (categoryIndexA !== categoryIndexB) {
+            return categoryIndexA - categoryIndexB;
+        }
+
+        return nameA.localeCompare(nameB, "de");
+    });
+
+    sortedEntries.forEach(([key, details]) => {
+        const li = document.createElement("li");
+        const name = key.split("-")[0];
+        const amountText = details.amount !== "" && details.amount !== undefined ? details.amount : "";
+        const unitText = details.unit || "";
+
+        li.innerHTML = `<img src="icons/dash-circle.svg" class="remove-item" alt="Remove"> ${amountText} ${unitText} ${name}`;
+
+        li.querySelector(".remove-item").addEventListener("click", () => {
+            delete recipeShoppingList[key];
+            delete manualShoppingList[key];
+            renderShoppingList();
+        });
+
+        shoppingListEl.appendChild(li);
+    });
+}
+
+function toggleTagSelection(event) {
+    const tag = event.target.value;
+
+    if (selectedTags.has(tag)) {
+        selectedTags.delete(tag);
+        event.target.classList.remove("selected");
+    } else {
+        selectedTags.add(tag);
+        event.target.classList.add("selected");
+    }
+
+    renderRecipes();
+}
+
+function clearShoppingList() {
+    selectedRecipes.clear();
+
+    Object.keys(recipeShoppingList).forEach(key => delete recipeShoppingList[key]);
+    Object.keys(manualShoppingList).forEach(key => delete manualShoppingList[key]);
+
+    renderShoppingList();
+    renderRecipes();
+}
+
+function addItemToList() {
+    const input = document.getElementById("item-input").value;
+    const [rawName, amount, unit] = input.split(",").map(item => item.trim());
+
+    if (rawName) {
+        const normalizedName = normalizeIngredientName(rawName);
+        const key = `${normalizedName}-${unit || ""}`;
+        const parsedAmount = parseFloat(amount);
+
+        if (manualShoppingList[key]) {
+            if (!isNaN(parsedAmount)) {
+                const currentAmount = parseFloat(manualShoppingList[key].amount) || 0;
+                manualShoppingList[key].amount = currentAmount + parsedAmount;
+            }
+        } else {
+            manualShoppingList[key] = {
+                amount: !isNaN(parsedAmount) ? parsedAmount : "",
+                unit: unit || ""
+            };
+        }
+
+        renderShoppingList();
+        document.getElementById("item-input").value = "";
+    }
+}
+
+document.querySelectorAll('#tag-selection button').forEach(button => {
+    button.addEventListener('click', toggleTagSelection);
+});
+
+document.getElementById('clear-list').addEventListener('click', clearShoppingList);
+document.getElementById('add-item').addEventListener('click', addItemToList);
+
+document.addEventListener("DOMContentLoaded", renderRecipes);
