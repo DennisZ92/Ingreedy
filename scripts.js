@@ -172,7 +172,7 @@ const recipes = [
     },
     {
         name: "Baked Potato",
-        image: "images/Baked_potato.png",
+        image: "images/Baked_Potato.png",
         link: "",
         tags: ["Beilage"],
         ingredients: [
