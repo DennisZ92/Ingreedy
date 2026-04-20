@@ -155,7 +155,7 @@ const recipes = [
 
     {
         name: "Garlic Chilli Noodles",
-        image: "images/garlic_chilli_noodles.png",
+        image: "images/Garlic_Chilli_Noodles.png",
         link: "https://www.youtube.com/watch?v=bG8KpOvN5V8",
         tags: ["Hauptgericht"],
         ingredients: [
@@ -172,7 +172,7 @@ const recipes = [
     },
     {
         name: "Baked Potato",
-        image: "images/baked_potato.png",
+        image: "images/Baked_potato.png",
         link: "",
         tags: ["Beilage"],
         ingredients: [
@@ -183,7 +183,7 @@ const recipes = [
     },
     {
         name: "Southwest Wrap",
-        image: "images/southwest_wrap.png",
+        image: "images/Southwest_Wrap.png",
         link: "https://tastesbetterfromscratch.com/crispy-southwest-wrap/",
         tags: ["Hauptgericht"],
         ingredients: [
@@ -206,7 +206,7 @@ const recipes = [
     },
     {
         name: "Rosenkohl",
-        image: "images/rosenkohl.png",
+        image: "images/Rosenkohl.png",
         link: "",
         tags: ["Beilage"],
         ingredients: [
@@ -217,7 +217,7 @@ const recipes = [
     },
     {
         name: "Mujadarra",
-        image: "images/mujadarra.png",
+        image: "images/Mujadarra.png",
         link: "https://www.afamilyfeast.com/mujadarra/",
         tags: ["Beilage"],
         ingredients: [
@@ -228,7 +228,7 @@ const recipes = [
     },
     {
         name: "Gefüllte Zwiebeln",
-        image: "images/gefuellte_zwiebeln.png",
+        image: "images/Gefuellte_Zwiebeln.png",
         link: "https://www.facebook.com/watch/?ref=saved&v=1430710058837180",
         tags: ["Hauptgericht", "Low-Carb"],
         ingredients: [
@@ -247,7 +247,7 @@ const recipes = [
     },
     {
         name: "Tortellini Suppe",
-        image: "images/tortellini_suppe.png",
+        image: "images/Tortellini_Suppe.png",
         link: "https://www.facebook.com/watch/?ref=saved&v=2186372045178020",
         tags: ["Hauptgericht"],
         ingredients: [
@@ -268,7 +268,7 @@ const recipes = [
     },
     {
         name: "Hühnchen Shawarma",
-        image: "images/huehnchen_shawarma.png",
+        image: "images/Huehnchen_Shawarma.png",
         link: "https://www.facebook.com/reel/1857379525184933",
         tags: ["Hauptgericht","High-Protein","Low-Carb"],
         ingredients: [
@@ -293,7 +293,7 @@ const recipes = [
     },
     {
         name: "Zwiebel Pasta",
-        image: "images/zwiebel_pasta.png",
+        image: "images/Zwiebel_pasta.png",
         link: "https://www.facebook.com/watch/?ref=saved&v=1493500685009580",
         tags: ["Hauptgericht"],
         ingredients: [
@@ -309,7 +309,7 @@ const recipes = [
     },
     {
         name: "Chilli Hühnchen",
-        image: "images/chilli_huehnchen.png",
+        image: "images/Chilli_Huehnchen.png",
         link: "https://www.facebook.com/watch/?ref=saved&v=1844801169065888",
         tags: ["Hauptgericht","High-Protein"],
         ingredients: [
@@ -326,7 +326,7 @@ const recipes = [
     },
     {
         name: "Paprikash",
-        image: "images/paprikash.png",
+        image: "images/Paprikash.png",
         link: "",
         tags: ["Hauptgericht","High-Protein"],
         ingredients: [
@@ -343,7 +343,7 @@ const recipes = [
     },
     {
         name: "Reis Hack Pfanne",
-        image: "images/reis_hack_pfanne.png",
+        image: "images/Reis_Hack_Pfanne.png",
         link: "https://www.facebook.com/watch/?ref=saved&v=737544619315115",
         tags: ["Hauptgericht","High-Protein"],
         ingredients: [
@@ -357,7 +357,7 @@ const recipes = [
     },
     {
         name: "Gemüsedöner",
-        image: "images/gemuesedoener.png",
+        image: "images/Gemuesedoener.png",
         link: "",
         tags: ["Hauptgericht"],
         ingredients: [
@@ -378,7 +378,7 @@ const recipes = [
     },
     {
         name: "Pasta Carbonara",
-        image: "images/carbonara.png",
+        image: "images/Carbonara.png",
         link: "",
         tags: ["Hauptgericht"],
         ingredients: [
@@ -393,7 +393,7 @@ const recipes = [
     },
     {
         name: "Königsberger Klopse",
-        image: "images/koenigsberger_klopse.png",
+        image: "images/Koenigsberger_Klopse.png",
         link: "",
         tags: ["Hauptgericht"],
         ingredients: [
